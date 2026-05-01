@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivek Jha | Portfolio</title>
+    <style>
+        /* Animation Keyframes */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+        /* Attractive Animated Background */
+        body {
+            background: linear-gradient(-45deg, #0f172a, #1e293b, #020617, #1e1b4b);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: #f8fafc;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .container { width: 100%; max-width: 1100px; margin: auto; padding: 0 20px; }
+
+        /* Card Hover Effect */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 25px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
+            border-color: #38bdf8;
+        }
+
+        /* Responsive Grid */
+        .grid {
+            display: grid;
+            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .hero-h1 { font-size: 2.8rem !important; }
+            .hero-p { font-size: 1.1rem !important; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header style="height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; flex-direction: column; padding: 20px;">
+        <div style="animation: float 4s ease-in-out infinite;">
+            <div style="width: 150px; height: 150px; border-radius: 50%; border: 4px solid #38bdf8; overflow: hidden; margin: 0 auto 20px; box-shadow: 0 0 20px #38bdf8;">
+                <img src="IMG_20260125_144908657.jpg.jpeg" alt="Vivek Jha" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+        </div>
+        <h1 class="hero-h1" style="font-size: 4.5rem; letter-spacing: -2px; margin-bottom: 10px; color: #fff; text-shadow: 0 5px 15px rgba(0,0,0,0.5);">VIVEK JHA</h1>
+        <p class="hero-p" style="font-size: 1.5rem; color: #38bdf8; font-weight: 300; margin-bottom: 30px;">E-Commerce Executive & Web Developer</p>
+        
+        <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
+            <a href="mailto:Jhavivek9911@gmail.com" style="background: #2563eb; color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: 0.3s; box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">Hire Me</a>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <section style="margin-bottom: 80px;">
+            <h2 style="font-size: 2rem; margin-bottom: 30px; border-bottom: 2px solid #38bdf8; display: inline-block;">Education</h2>
+            <div class="glass-card">
+                <h3 style="color: #38bdf8;">Master of Computer Applications (MCA)</h3>
+                <p>JB Knowledge Park | 2022 - 2025 (Pursuing)</p>
+                <hr style="margin: 15px 0; opacity: 0.1;">
+                <h3>Bachelor of Computer Applications (BCA)</h3>
+                <p>JIMS Noida Extension (CCSU) | Completed 2022</p>
+            </div>
+        </section>
+
+        <section style="margin-bottom: 80px;">
+            <h2 style="font-size: 2rem; margin-bottom: 30px; border-bottom: 2px solid #38bdf8; display: inline-block;">Skills & Expertise</h2>
+            <div class="grid">
+                <div class="glass-card">
+                    <h3 style="margin-bottom: 15px;">Web Tools</h3>
+                    <p style="color: #94a3b8;">HTML5, CSS3, C, C++</p>
+                </div>
+                <div class="glass-card">
+                    <h3 style="margin-bottom: 15px;">E-Commerce</h3>
+                    <p style="color: #94a3b8;">Shopify, WordPress, Wix, Amazon, Myntra, Vaaree</p>
+                </div>
+                <div class="glass-card">
+                    <h3 style="margin-bottom: 15px;">Digital Assets</h3>
+                    <p style="color: #94a3b8;">AI Image to Video, Social Media Marketing, MS Office</p>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-bottom: 80px;">
+            <h2 style="font-size: 2rem; margin-bottom: 30px; border-bottom: 2px solid #38bdf8; display: inline-block;">Live Projects</h2>
+            <div class="grid">
+                <a href="https://decorsmantra.com/" target="_blank" style="text-decoration: none; color: inherit;">
+                    <div class="glass-card" style="text-align: center;">
+                        <h3>Decors Mantra</h3>
+                        <p style="font-size: 0.9rem; color: #38bdf8; margin-top: 10px;">Check Site →</p>
+                    </div>
+                </a>
+                <a href="https://urbanwallsolutionsg.com/" target="_blank" style="text-decoration: none; color: inherit;">
+                    <div class="glass-card" style="text-align: center;">
+                        <h3>Urban Wall Solution</h3>
+                        <p style="font-size: 0.9rem; color: #38bdf8; margin-top: 10px;">Check Site →</p>
+                    </div>
+                </a>
+                <a href="https://moovingsg.com/" target="_blank" style="text-decoration: none; color: inherit;">
+                    <div class="glass-card" style="text-align: center;">
+                        <h3>Mooving SG</h3>
+                        <p style="font-size: 0.9rem; color: #38bdf8; margin-top: 10px;">Check Site →</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+    <footer style="background: rgba(0,0,0,0.5); padding: 50px 20px; text-align: center; backdrop-filter: blur(10px);">
+        <div style="margin-bottom: 20px; display: flex; justify-content: center; gap: 25px; flex-wrap: wrap;">
+            <a href="https://www.linkedin.com/in/vivek-jha-65135925b" style="color: white; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#38bdf8'" onmouseout="this.style.color='#fff'">LinkedIn</a>
+            <a href="https://github.com/vivek-kumar258" style="color: white; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#38bdf8'" onmouseout="this.style.color='#fff'">GitHub</a>
+            <a href="https://www.instagram.com/sunn_vivek?igsh=MXJ5NGc0cW5vb2g0eg==" style="color: white; text-decoration: none; transition: 0.3s;" onmouseover="this.style.color='#e1306c'" onmouseout="this.style.color='#fff'">Instagram</a>
+        </div>
+        <p style="color: #94a3b8; font-size: 0.9rem;">&copy; 2026 Vivek Jha | Designed for Excellence</p>
+    </footer>
+
+</body>
+</html>
